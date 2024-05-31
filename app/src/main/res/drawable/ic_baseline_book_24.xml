@@ -5,18 +5,13 @@
     android:viewportWidth="24.0"
     android:viewportHeight="24.0">
 
-    <!-- Knihovna -->
+    <!-- Čtvercová strana deníku -->
     <path
-        android:fillColor="#AFAFAF"
-        android:pathData="M18,4H6c-1.1,0 -1.99,0.9 -1.99,2L4,20c0,1.1 0.89,2 1.99,2H18c1.1,0 2,-0.9 2,-2V6c0,-1.1 -0.9,-2 -2,-2z"/>
+        android:fillColor="#FFCC80"
+        android:pathData="M20,4H4c-1.1,0 -1.99,0.9 -1.99,2L2,18c0,1.1 0.9,2 2,2h16c1.1,0 2,-0.9 2,-2V6c0,-1.1 -0.9,-2 -2,-2z"/>
 
-    <!-- Stránky knihy -->
+    <!-- Linka pro psaní -->
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M6,4h12v16H6z"/>
-
-    <!-- Spine knihy -->
-    <path
-        android:fillColor="#FF5722"
-        android:pathData="M11.5,4.7v14.6c0,0.2 0.1,0.4 0.3,0.4l0,0c0.2,0 0.3,-0.2 0.3,-0.4V4.7c0,-0.2 -0.1,-0.4 -0.3,-0.4l0,0c-0.2,0 -0.3,0.2 -0.3,0.4zM12.5,4.7v14.6c0,0.2 0.1,0.4 0.3,0.4l0,0c0.2,0 0.3,-0.2 0.3,-0.4V4.7c0,-0.2 -0.1,-0.4 -0.3,-0.4l0,0c-0.2,0 -0.3,0.2 -0.3,0.4z"/>
+        android:pathData="M4,8h16v1H4zM4,11h16v1H4zM4,14h16v1H4z"/>
 </vector>
