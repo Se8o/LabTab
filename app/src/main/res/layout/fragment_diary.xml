@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ui.Diary.DiaryFragment">
+
+    <EditText
+        android:id="@+id/diary_entry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Write your diary entry here"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        android:minHeight="48dp" /> <!-- Ensure minimum height for touch target -->
+
+    <Button
+        android:id="@+id/add_photo_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/diary_entry"
+        android:layout_marginTop="8dp"
+        android:text="Add Photo" />
+
+    <Button
+        android:id="@+id/save_entry_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_photo_button"
+        android:layout_marginTop="8dp"
+        android:text="Save Entry" />
+
+    <ScrollView
+        android:id="@+id/entries_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/save_entry_button"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Scroll through your diary entries"> <!-- Adding contentDescription -->
+
+        <LinearLayout
+            android:id="@+id/entries_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Individual entries will be added here programmatically -->
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
