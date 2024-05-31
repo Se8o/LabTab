@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24.0"
+    android:viewportHeight="24.0">
 
-</selector>
+    <!-- Knihovna -->
+    <path
+        android:fillColor="#AFAFAF"
+        android:pathData="M18,4H6c-1.1,0 -1.99,0.9 -1.99,2L4,20c0,1.1 0.89,2 1.99,2H18c1.1,0 2,-0.9 2,-2V6c0,-1.1 -0.9,-2 -2,-2z"/>
+
+    <!-- Stránky knihy -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M6,4h12v16H6z"/>
+
+    <!-- Spine knihy -->
+    <path
+        android:fillColor="#FF5722"
+        android:pathData="M11.5,4.7v14.6c0,0.2 0.1,0.4 0.3,0.4l0,0c0.2,0 0.3,-0.2 0.3,-0.4V4.7c0,-0.2 -0.1,-0.4 -0.3,-0.4l0,0c-0.2,0 -0.3,0.2 -0.3,0.4zM12.5,4.7v14.6c0,0.2 0.1,0.4 0.3,0.4l0,0c0.2,0 0.3,-0.2 0.3,-0.4V4.7c0,-0.2 -0.1,-0.4 -0.3,-0.4l0,0c-0.2,0 -0.3,0.2 -0.3,0.4z"/>
+</vector>
