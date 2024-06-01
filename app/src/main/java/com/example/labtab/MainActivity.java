@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Load the DiaryFragment by default if there is no saved instance state
+
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new DiaryFragment()).commit();
         }
