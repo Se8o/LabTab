@@ -13,27 +13,36 @@
         android:padding="8dp"
         android:minHeight="48dp" /> <!-- Ensure minimum height for touch target -->
 
-    <Button
-        android:id="@+id/add_photo_button"
+    <!-- Container to place buttons side by side -->
+    <LinearLayout
+        android:id="@+id/button_container"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/diary_entry"
-        android:layout_marginTop="8dp"
-        android:text="Add Photo" />
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"> <!-- Adjusted margin to separate from EditText -->
 
-    <Button
-        android:id="@+id/save_entry_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/add_photo_button"
-        android:layout_marginTop="8dp"
-        android:text="Save Entry" />
+        <Button
+            android:id="@+id/add_text_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Text"
+            android:layout_marginEnd="8dp" /> <!-- Add marginEnd to separate buttons -->
+
+        <Button
+            android:id="@+id/save_entry_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save Entry"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
 
     <ScrollView
         android:id="@+id/entries_scroll_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/save_entry_button"
+        android:layout_below="@id/button_container"
         android:layout_marginTop="16dp"
         android:contentDescription="Scroll through your diary entries"> <!-- Adding contentDescription -->
 
