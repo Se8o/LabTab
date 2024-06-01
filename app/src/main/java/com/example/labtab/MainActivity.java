@@ -10,11 +10,20 @@ import com.example.labtab.ui.Diary.DiaryFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import android.view.MenuItem;
 
+/**
+ * The main activity of the application, which hosts fragments for diary and calendar functionalities.
+ * It uses a {@link BottomNavigationView} to switch between the {@link DiaryFragment} and {@link CalendarFragment}.
+ */
 public class MainActivity extends AppCompatActivity {
 
     private static final int MENU_ITEM_DIARY = R.id.navigation_diary;
     private static final int MENU_ITEM_CALENDAR = R.id.navigation_calendar;
 
+    /**
+     * Called when the activity is starting. This is where most initialization should go.
+     *
+     * @param savedInstanceState If the activity is being re-initialized after previously being shut down then this Bundle contains the data it most recently supplied in onSaveInstanceState(Bundle).
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Load the DiaryFragment by default if there is no saved instance state
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new DiaryFragment()).commit();
         }

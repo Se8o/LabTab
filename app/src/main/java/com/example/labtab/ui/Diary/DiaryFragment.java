@@ -26,11 +26,24 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+/**
+ * A {@link Fragment} subclass that represents a diary entry view.
+ * Allows users to add text and image entries to their diary.
+ */
 public class DiaryFragment extends Fragment {
     private static final int PICK_IMAGE_REQUEST = 1;
     private LinearLayout entriesContainer;
     private Bitmap selectedImage;
 
+    /**
+     * Called to have the fragment instantiate its user interface view.
+     *
+     * @param inflater The LayoutInflater object that can be used to inflate any views in the fragment.
+     * @param container If non-null, this is the parent view that the fragment's UI should be attached to.
+     *                  The fragment should not add the view itself, but this can be used to generate the LayoutParams of the view.
+     * @param savedInstanceState If non-null, this fragment is being re-constructed from a previous saved state as given here.
+     * @return The View for the fragment's UI, or null.
+     */
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -59,11 +72,23 @@ public class DiaryFragment extends Fragment {
         return view;
     }
 
+    /**
+     * Opens the image chooser to select an image from the device's gallery.
+     */
     private void openImageChooser() {
         Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(intent, PICK_IMAGE_REQUEST);
     }
 
+    /**
+     * Called when an activity you launched exits, giving you the requestCode you started it with,
+     * the resultCode it returned, and any additional data from it.
+     *
+     * @param requestCode The integer request code originally supplied to startActivityForResult(),
+     *                    allowing you to identify who this result came from.
+     * @param resultCode The integer result code returned by the child activity through its setResult().
+     * @param data An Intent, which can return result data to the caller (various data can be attached to Intent "extras").
+     */
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -77,6 +102,12 @@ public class DiaryFragment extends Fragment {
         }
     }
 
+    /**
+     * Adds a new entry to the diary with the provided text and image.
+     *
+     * @param text The text content of the diary entry.
+     * @param image The image content of the diary entry (optional).
+     */
     private void addEntry(String text, Bitmap image) {
         LayoutInflater inflater = LayoutInflater.from(getContext());
         View entryView = inflater.inflate(R.layout.diary_entry_layout, entriesContainer, false);
@@ -97,6 +128,6 @@ public class DiaryFragment extends Fragment {
         String currentDateAndTime = sdf.format(new Date());
         entryDate.setText(currentDateAndTime);
 
-        entriesContainer.addView(entryView, 0); // add at the top
+        entriesContainer.addView(entryView, 0);
     }
 }
