@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -24,9 +25,16 @@ public class CalendarFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_calendar, container, false);
 
-        selectedDateTextView = view.findViewById(R.id.selected_date);
         datePicker = view.findViewById(R.id.date_picker);
         EditText eventDescription = view.findViewById(R.id.event_description);
+        selectedDateTextView = new TextView(getContext()); // Initialize TextView programmatically
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.WRAP_CONTENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT
+        );
+        params.addRule(RelativeLayout.BELOW, R.id.event_description);
+        params.addRule(RelativeLayout.CENTER_HORIZONTAL);
+        ((RelativeLayout) view).addView(selectedDateTextView, params);
 
         // Set initial date in the TextView
         Calendar c = Calendar.getInstance();

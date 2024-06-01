@@ -11,9 +11,8 @@
         android:hint="Write your diary entry here"
         android:layout_marginTop="16dp"
         android:padding="8dp"
-        android:minHeight="48dp" /> <!-- Ensure minimum height for touch target -->
+        android:minHeight="48dp" />
 
-    <!-- Container to place buttons side by side -->
     <LinearLayout
         android:id="@+id/button_container"
         android:layout_width="wrap_content"
@@ -21,14 +20,22 @@
         android:layout_below="@id/diary_entry"
         android:layout_centerHorizontal="true"
         android:orientation="horizontal"
-        android:layout_marginTop="16dp"> <!-- Adjusted margin to separate from EditText -->
+        android:layout_marginTop="16dp">
 
         <Button
             android:id="@+id/add_text_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Add Text"
-            android:layout_marginEnd="8dp" /> <!-- Add marginEnd to separate buttons -->
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/add_image_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Image"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
 
         <Button
             android:id="@+id/save_entry_button"
@@ -44,7 +51,7 @@
         android:layout_height="match_parent"
         android:layout_below="@id/button_container"
         android:layout_marginTop="16dp"
-        android:contentDescription="Scroll through your diary entries"> <!-- Adding contentDescription -->
+        android:contentDescription="Scroll through your diary entries">
 
         <LinearLayout
             android:id="@+id/entries_container"
@@ -52,9 +59,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
-
-            <!-- Individual entries will be added here programmatically -->
-
         </LinearLayout>
     </ScrollView>
 
