@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "LabTab"
 include(":app")
+include(":JarFile")
