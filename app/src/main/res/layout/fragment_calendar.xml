@@ -19,5 +19,22 @@
         android:layout_below="@id/date_picker"
         android:hint="Event Description"
         android:minHeight="48dp" />
+
+    <Button
+        android:id="@+id/add_event_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/event_description"
+        android:layout_centerHorizontal="true"
+        android:text="Add Event" />
+
+    <ListView
+        android:id="@+id/events_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_event_button"
+        android:layout_marginTop="16dp" />
+
 </RelativeLayout>
+
 
